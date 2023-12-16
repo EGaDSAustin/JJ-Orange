@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Cashier.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Oven.unity
+    guid: e2cbddc9bf9e85340804ee1fda9e772f
+  - enabled: 1
+    path: Assets/Scenes/Toppings.unity
+    guid: e8494e12b0095c241b9bfc6fa829e33d
   m_configObjects: {}
