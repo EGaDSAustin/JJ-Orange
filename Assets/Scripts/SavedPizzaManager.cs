@@ -40,6 +40,7 @@ public class SavedPizzaManager : MonoBehaviour
         children.ForEach(child => Destroy(child));
         thisPizza.transform.position = new Vector3(100, 100, 100);
         DontDestroyOnLoad(thisPizza);
+        
         // TODO: instead of moving the pizza off screen, resize it and put it on the saved pizza list
         // the ForeverLoadedCanvas will have to be converted to a world space canvas otherwise the
         // pizza sprite will be covered up by the box. 
