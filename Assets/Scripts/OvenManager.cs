@@ -31,19 +31,19 @@ public class OvenManager : MonoBehaviour
         
     }
 
-    void OpenOven()
+    public void OpenOven()
     {
         open.enabled = true;
         closed.enabled = false;
     }
 
-    void CloseOven()
+    public void CloseOven()
     {
         open.enabled = false;
         closed.enabled = true;
     }
 
-    void RunOven(int time)
+    public void RunOven(int time)
     {
         curTime = time;
         overcooked = false;

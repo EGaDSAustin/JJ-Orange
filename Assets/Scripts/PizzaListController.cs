@@ -21,13 +21,26 @@ public class PizzaListController : MonoBehaviour
 
     public void AddPizza(Pizza pizza)
     {
-        pizzas.Add(pizza);
-        UpdatePizzasText();
+        if (!ContainsPizza(pizza.id)) {
+            pizzas.Add(pizza);
+            UpdatePizzasText();
+        } 
     }
-
     private void Update()
     {
 
+    }
+
+    private bool ContainsPizza(int id)
+    {
+        for (int i = 0; i < pizzas.Count; i++)
+        {
+            if (pizzas[i].id == id)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void RemovePizza(int id)

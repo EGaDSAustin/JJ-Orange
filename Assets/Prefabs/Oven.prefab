@@ -414,9 +414,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6231117761813867647}
   - component: {fileID: 5971841680961078014}
+  - component: {fileID: 4260481308517378334}
   m_Layer: 0
   m_Name: Oven
-  m_TagString: Untagged
+  m_TagString: Oven
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,3 +455,24 @@ MonoBehaviour:
   open: {fileID: 2281589716677365740}
   closed: {fileID: 443019428544425173}
   timerText: {fileID: 3741336313204000541}
+--- !u!65 &4260481308517378334
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7432472625791269554}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5, y: 2.2, z: 1}
+  m_Center: {x: 0, y: 0.3, z: -1}

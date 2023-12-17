@@ -40,19 +40,19 @@ public class ToppingController : MonoBehaviour
     void AddFish()
     {
         Vector3 pos = Random.insideUnitSphere;
-        Instantiate(fishTopping, new Vector3(pos.x * 3, pos.y, -1.01f), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
+        Instantiate(fishTopping, new Vector3(pos.x * 3, pos.y, -0.101f), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
     }
 
     void AddShrimp()
     {
         Vector3 pos = Random.insideUnitSphere;
-        Instantiate(shrimpTopping, new Vector3(pos.x * 3, pos.y, -1.01f), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
+        Instantiate(shrimpTopping, new Vector3(pos.x * 3, pos.y, -0.101f), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
     }
     
     void AddSquid()
     {
         Vector3 pos = Random.insideUnitSphere;
-        Instantiate(squidTopping, new Vector3(pos.x * 3, pos.y, -1.01f), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
+        Instantiate(squidTopping, new Vector3(pos.x * 3, pos.y, -0.101f), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
     }
 
     void SavePizza()

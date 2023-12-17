@@ -975,6 +975,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 774047293013454487, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1826177145424386556, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -991,9 +995,17 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 2804159238662458266, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_TagString
+      value: SavedPizzas
+      objectReference: {fileID: 0}
     - target: {fileID: 2826252579306697938, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3207274166614603368, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_TagString
+      value: SavedPizzas
       objectReference: {fileID: 0}
     - target: {fileID: 3762969971044778613, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1167,6 +1179,10 @@ PrefabInstance:
       propertyPath: orderObjects.Array.data[4]
       value: 
       objectReference: {fileID: 1832803000}
+    - target: {fileID: 7289322929840472227, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_TagString
+      value: SavedPizzas
+      objectReference: {fileID: 0}
     - target: {fileID: 8796752553956286549, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
@@ -1183,6 +1199,10 @@ PrefabInstance:
       propertyPath: pizzaListController
       value: 
       objectReference: {fileID: 2088143190}
+    - target: {fileID: 9139953146657177962, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6952750150187812470, guid: de5099072503e694bb212771252dd2e4, type: 3}
     m_RemovedGameObjects: []
@@ -1575,7 +1595,7 @@ Transform:
   m_GameObject: {fileID: 1713981697}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

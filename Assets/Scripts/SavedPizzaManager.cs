@@ -46,16 +46,22 @@ public class SavedPizzaManager : MonoBehaviour
 
         // Create pizza clone and save it
         GameObject savedPizza = Instantiate(mainPizza);
-        savedPizza.AddComponent<SavedPizza>();
-        Destroy(savedPizza.GetComponent<ToppingController>());
-        DontDestroyOnLoad(savedPizza);
 
         // Get component because pizza list controller gets destroyed for some reason after scene load
         if (pizzaListController == null)
         {
             pizzaListController = GetComponentInChildren<PizzaListController>();
         }
-        pizzaListController.AddPizza(new Pizza { pizzaObject = savedPizza, toppingsMask = toppingMask, timeCooked = 0, id = pizzaId++ });
+
+        Pizza sp = new Pizza { pizzaObject = savedPizza, toppingsMask = toppingMask, timeCooked = 0, id = pizzaId++ };
+        pizzaListController.AddPizza(sp);
+
+        // Set up pizza game object components
+        // Box collider and rigidbody for mouse drags
+        savedPizza.AddComponent<SavedPizza>().pizza = sp;
+        savedPizza.AddComponent<BoxCollider>();
+        savedPizza.AddComponent<Rigidbody>().isKinematic = true ; // Creates a kinematic rigidbody 
+        Destroy(savedPizza.GetComponent<ToppingController>());
 
         foreach (Transform child in mainPizza.transform)
         {
