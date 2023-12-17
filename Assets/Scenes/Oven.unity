@@ -579,6 +579,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5458808057113821957, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 219844781}
     - target: {fileID: 5758823495718897635, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: m_Name
       value: ForeverLoadedCanvas
@@ -662,6 +666,10 @@ PrefabInstance:
     - target: {fileID: 6035337850384627035, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6362952764426045036, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

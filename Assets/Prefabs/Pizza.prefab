@@ -104,3 +104,4 @@ MonoBehaviour:
   fishTopping: {fileID: 2496499728261548932, guid: 30495e1882f31894d8e7eeb0da82b268, type: 3}
   shrimpTopping: {fileID: 2496499728261548932, guid: d41cfae411da64c48bf40ba63b0e03d0, type: 3}
   squidTopping: {fileID: 2496499728261548932, guid: 2191294529a24c7459b8137af45b0891, type: 3}
+  savedPizzaManager: {fileID: 0}

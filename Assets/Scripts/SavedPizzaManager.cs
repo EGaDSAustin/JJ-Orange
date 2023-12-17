@@ -6,6 +6,8 @@ using UnityEngine;
 public class Pizza
 {
     public GameObject pizzaObject;
+    public int toppingsMask;
+    public int timeCooked;
     public int id;
 }
 
@@ -13,13 +15,15 @@ public class SavedPizzaManager : MonoBehaviour
 {
     static int pizzaId = 0;
 
-    private List<Pizza> pizzas;
+    private GameObject mainPizza;
+
+    [SerializeField]
+    private PizzaListController pizzaListController;
     [SerializeField]
     private TextMeshProUGUI savedText;
     // Start is called before the first frame update
     void Start()
     {
-        pizzas = new List<Pizza>();
 
     }
 
@@ -29,26 +33,32 @@ public class SavedPizzaManager : MonoBehaviour
         
     }
 
-    void AddPizza()
+    public void AddPizza()
     {
         // should only be called in toppings scene
-        GameObject thisPizza = GameObject.Find("Pizza");
-        pizzas.Add(new Pizza { pizzaObject = thisPizza, id = pizzaId++ });
-        GameObject newPizza = Instantiate(thisPizza);
+        mainPizza = GameObject.Find("Pizza");
+
+        int toppingMask = 0;
+
         List<GameObject> children = new List<GameObject>();
-        foreach (Transform child in newPizza.transform) children.Add(child.gameObject);
-        children.ForEach(child => Destroy(child));
-        thisPizza.transform.position = new Vector3(100, 100, 100);
-        DontDestroyOnLoad(thisPizza);
+        if (mainPizza.transform.Find("Fish") != null) { toppingMask += 4; }
+        if (mainPizza.transform.Find("Shrimp") != null) { toppingMask += 2; }
+        if (mainPizza.transform.Find("Squid") != null) { toppingMask += 1; }
+
+        // Create pizza clone and save it
+        GameObject savedPizza = Instantiate(mainPizza);
+        Destroy(savedPizza.GetComponent<ToppingController>());
+        DontDestroyOnLoad(savedPizza);
+
+        pizzaListController.AddPizza(new Pizza { pizzaObject = savedPizza, toppingsMask = toppingMask, timeCooked = 0, id = pizzaId++ });
+
+        foreach (Transform child in mainPizza.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
         // TODO: instead of moving the pizza off screen, resize it and put it on the saved pizza list
         // the ForeverLoadedCanvas will have to be converted to a world space canvas otherwise the
         // pizza sprite will be covered up by the box. 
-        string newText = "";
-        for (int i = 0; i < pizzas.Count; i++)
-        {
-            // TODO; change to something more useful
-            newText += pizzas[i].id + "\n";
-        }
-        savedText.text = newText;
     }
 }

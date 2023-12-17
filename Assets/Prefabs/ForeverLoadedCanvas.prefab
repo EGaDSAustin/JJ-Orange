@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 6799986270454291479}
   - component: {fileID: 2490679383347856111}
   - component: {fileID: 6349651813777000222}
-  - component: {fileID: 6952750150187812470}
+  - component: {fileID: 6105730139416636677}
   m_Layer: 5
   m_Name: Pizzas
   m_TagString: Untagged
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6952750150187812470
+--- !u!114 &6105730139416636677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -827,16 +827,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721290967332437026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 010e4342c9ce95241937305faafc6e0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 984e5db9f112495489e4b248a8ef4f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderTMP: {fileID: 6349651813777000222}
-  orderObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  pizzaTMP: {fileID: 6349651813777000222}
+  pizzaObjects:
+  - {fileID: 774047293013454487}
+  - {fileID: 9139953146657177962}
+  - {fileID: 2804159238662458266}
+  - {fileID: 7289322929840472227}
+  - {fileID: 3207274166614603368}
 --- !u!1 &2275916299155602964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1363,7 @@ GameObject:
   - component: {fileID: 1747394188965825341}
   - component: {fileID: 6484625693744406073}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Orders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1975,7 +1975,7 @@ RectTransform:
   m_GameObject: {fileID: 5758823495718897635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.009259259, y: 0.009259259, z: 0.4287037}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1414135450135939554}
@@ -1985,9 +1985,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 411.99997, y: 231.5}
+  m_SizeDelta: {x: 1922.0734, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5458808057113821957
 Canvas:
   m_ObjectHideFlags: 0
@@ -1997,7 +1997,7 @@ Canvas:
   m_GameObject: {fileID: 5758823495718897635}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2654,9 +2654,9 @@ GameObject:
   - component: {fileID: 1826177145424386556}
   - component: {fileID: 3655877980187211844}
   - component: {fileID: 1826519374039275935}
-  - component: {fileID: 9091705566845002843}
+  - component: {fileID: 539868572926196570}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: SavedPizzas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2726,7 +2726,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9091705566845002843
+--- !u!114 &539868572926196570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2738,7 +2738,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e517ba057df47084fb97acb5ac2a9196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savedText: {fileID: 6349651813777000222}
+  pizzaListController: {fileID: 6105730139416636677}
+  savedText: {fileID: 4816986726466707721}
 --- !u!1 &8501671189207473758
 GameObject:
   m_ObjectHideFlags: 0
