@@ -59,7 +59,7 @@ public class PenguinSpawner : MonoBehaviour
         {
             penguins[2] = Instantiate(customerPenguin, SceneManager.GetActiveScene().name == "Cashier" ? penguinLocations[2] : offScreen, Quaternion.identity);
         }
-
+        FindObjectOfType<AudioManager>().Play("NewCustomer");
         Invoke("TrySpawnPenguin", Random.Range(5.0f, 30.0f));
     }
 
