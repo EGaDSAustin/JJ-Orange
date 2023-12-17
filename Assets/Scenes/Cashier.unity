@@ -735,6 +735,16 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     source: {fileID: 0}
+  - name: AcceptOrder
+    clip: {fileID: 8300000, guid: a57966a886967744eac9a5f94f4bb46e, type: 3}
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: a136d68bebe68e14c96e9e467393427b, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
 --- !u!4 &1569698563
 Transform:
   m_ObjectHideFlags: 0

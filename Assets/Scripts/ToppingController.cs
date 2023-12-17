@@ -40,18 +40,24 @@ public class ToppingController : MonoBehaviour
     {
         Vector3 pos = Random.insideUnitSphere;
         Instantiate(fishTopping, new Vector3(pos.x * 3, pos.y, -2), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
+        FindObjectOfType<AudioManager>().Play("FishPlop");
+
     }
 
     void AddShrimp()
     {
         Vector3 pos = Random.insideUnitSphere;
         Instantiate(shrimpTopping, new Vector3(pos.x * 3, pos.y, -2), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
+        FindObjectOfType<AudioManager>().Play("ShrimpPlop");
+
     }
-    
+
     void AddSquid()
     {
         Vector3 pos = Random.insideUnitSphere;
         Instantiate(squidTopping, new Vector3(pos.x * 3, pos.y, -2), Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)), transform);
+        FindObjectOfType<AudioManager>().Play("SquidPlop");
+
     }
 
     void SavePizza()

@@ -1318,10 +1318,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: NewCustomer
+    clip: {fileID: 8300000, guid: 4efcd69f5a41a254b917c0d17121bd39, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: FishPlop
+    clip: {fileID: 8300000, guid: c9e4fc447f4b43a44aa8a2bc4b27cc0b, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: ShrimpPlop
+    clip: {fileID: 8300000, guid: 2a2112f3f3826a645a22e3be9ec9985b, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
+  - name: SquidPlop
+    clip: {fileID: 8300000, guid: db2bc0e563f1bb44b9eb992b5d43f93d, type: 3}
+    volume: 0.6
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1 &1713981697
 GameObject:
   m_ObjectHideFlags: 0

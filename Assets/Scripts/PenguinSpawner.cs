@@ -36,7 +36,6 @@ public class PenguinSpawner : MonoBehaviour
         penguinLocations[2] = new Vector3(-2.77f, 0.03f, -1f);
         offScreen = new Vector3(100f, 100f, -1f);
         SceneManager.activeSceneChanged += ChangedActiveScene;
-        FindObjectOfType<AudioManager>().Play("NewCustomer");
         Invoke("TrySpawnPenguin", 0.0f);
     }
 
@@ -60,7 +59,7 @@ public class PenguinSpawner : MonoBehaviour
         {
             penguins[2] = Instantiate(customerPenguin, SceneManager.GetActiveScene().name == "Cashier" ? penguinLocations[2] : offScreen, Quaternion.identity);
         }
-
+        FindObjectOfType<AudioManager>().Play("NewCustomer");
         Invoke("TrySpawnPenguin", Random.Range(5.0f, 30.0f));
     }
 

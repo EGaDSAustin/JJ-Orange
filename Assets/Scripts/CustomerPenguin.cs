@@ -44,6 +44,7 @@ public class CustomerPenguin : MonoBehaviour
     {
         if (!accepted)
         {
+            FindObjectOfType<AudioManager>().Play("AcceptOrder");
             accepted = true;
             cookTime = (int)Random.Range(10f, 61f);
             timerText.text = cookTime + "s";
