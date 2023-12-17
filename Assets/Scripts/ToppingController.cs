@@ -57,7 +57,11 @@ public class ToppingController : MonoBehaviour
 
     void SavePizza()
     {
-        // TODO
+        // Get game object because reference gets destroyed after scene change
+        if (savedPizzaManager == null)
+        {
+            savedPizzaManager = GameObject.Find("SavedPizzas").GetComponent<SavedPizzaManager>();
+        }
         savedPizzaManager.AddPizza();
     }
 }

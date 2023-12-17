@@ -16,7 +16,6 @@ public class SavedPizzaManager : MonoBehaviour
     static int pizzaId = 0;
 
     private GameObject mainPizza;
-
     [SerializeField]
     private PizzaListController pizzaListController;
     [SerializeField]
@@ -47,9 +46,15 @@ public class SavedPizzaManager : MonoBehaviour
 
         // Create pizza clone and save it
         GameObject savedPizza = Instantiate(mainPizza);
+        savedPizza.AddComponent<SavedPizza>();
         Destroy(savedPizza.GetComponent<ToppingController>());
         DontDestroyOnLoad(savedPizza);
 
+        // Get component because pizza list controller gets destroyed for some reason after scene load
+        if (pizzaListController == null)
+        {
+            pizzaListController = GetComponentInChildren<PizzaListController>();
+        }
         pizzaListController.AddPizza(new Pizza { pizzaObject = savedPizza, toppingsMask = toppingMask, timeCooked = 0, id = pizzaId++ });
 
         foreach (Transform child in mainPizza.transform)

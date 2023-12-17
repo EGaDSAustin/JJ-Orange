@@ -213,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 250451278}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -987,6 +987,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1872673256364947847, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826252579306697938, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762969971044778613, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4816986726466707721, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: m_fontSize
       value: 33.1
@@ -1107,6 +1119,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6037764369003235078, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6362952764426045036, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1151,6 +1167,10 @@ PrefabInstance:
       propertyPath: orderObjects.Array.data[4]
       value: 
       objectReference: {fileID: 1832803000}
+    - target: {fileID: 8796752553956286549, guid: de5099072503e694bb212771252dd2e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 9091705566845002843, guid: de5099072503e694bb212771252dd2e4, type: 3}
       propertyPath: MainPizza
       value: 

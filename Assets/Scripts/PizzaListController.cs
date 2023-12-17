@@ -25,6 +25,11 @@ public class PizzaListController : MonoBehaviour
         UpdatePizzasText();
     }
 
+    private void Update()
+    {
+
+    }
+
     public void RemovePizza(int id)
     {
         for (int i = 0; i < pizzas.Count; i++)
@@ -46,9 +51,12 @@ public class PizzaListController : MonoBehaviour
         for (; i < pizzas.Count; i++)
         {
             pizzasText += pizzas[i].timeCooked + "\n";
-            Debug.Log(pizzaObjects[i]);
-            pizzas[i].pizzaObject.transform.parent = pizzaObjects[i].transform;
-            pizzas[i].pizzaObject.transform.localPosition = new Vector3(0.0f, 0.0f, -0.1f);
+
+            // Find pizza object to store in scene because storing in list doesn't work for some reason
+            GameObject pizzaObject = transform.parent.Find("Pizza" + i).gameObject;
+
+            pizzas[i].pizzaObject.transform.parent = pizzaObject.transform;
+            pizzas[i].pizzaObject.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
             pizzas[i].pizzaObject.transform.localScale = new Vector3(25.0f, 25.0f, 25.0f);
         }
         pizzaTMP.text = pizzasText;
