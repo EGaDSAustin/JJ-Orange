@@ -37,8 +37,7 @@ public class SavedPizza : MonoBehaviour
         }
         else if (inCustomer)
         {
-            customer.ChangeEmotionHappy();
-            customer.Leave();
+            customer.checkPizza(pizza);
             Destroy(this.gameObject);
         }
 
@@ -66,7 +65,6 @@ public class SavedPizza : MonoBehaviour
         {
             inCustomer = true;
             customer = collision.gameObject.GetComponent<CustomerPenguin>();
-            Debug.Log("Customer Spotted");
         }
     }
 

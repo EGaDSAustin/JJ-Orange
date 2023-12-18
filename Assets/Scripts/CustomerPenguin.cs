@@ -15,15 +15,15 @@ public class CustomerPenguin : MonoBehaviour
     public SpriteRenderer shrimp;
     public SpriteRenderer squid;
     public SpriteRenderer emotion;
+    public BoxCollider collider;
     private int cookTime = 0;
+    private int toppingsMask = 0; 
     // TODO: migrate to some kind of array
     // makes much more sense and will support specific #s of each type of topping
-    private int toppingsMask = 0; 
     static int orderID = 0;
     private int id;
     private ListController listController;
 
-    // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
@@ -37,16 +37,27 @@ public class CustomerPenguin : MonoBehaviour
         Invoke("DecrementTimer", 1f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void checkPizza(Pizza nextPizza)
     {
-        
+        if (accepted)
+        {
+            if (nextPizza.toppingsMask == toppingsMask && nextPizza.timeCooked == cookTime)
+            {
+                ChangeEmotionHappy();
+                Leave();
+            }
+            else
+            {
+                ChangeEmotionAngry();
+            }
+        }
     }
 
     void Accept()
     {
         if (!accepted)
         {
+            collider.enabled = true;
             FindObjectOfType<AudioManager>().Play("AcceptOrder");
             accepted = true;
             cookTime = (int)Random.Range(10f, 61f);
@@ -63,7 +74,7 @@ public class CustomerPenguin : MonoBehaviour
         }
     }
 
-    public void ChangeEmotionHappy()
+    void ChangeEmotionHappy()
     {
         emotion.sprite = Resources.Load<Sprite>("happypenguin");
     }

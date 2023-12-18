@@ -482,6 +482,7 @@ MonoBehaviour:
   shrimp: {fileID: 6447273084947972338}
   squid: {fileID: 1441064162704335860}
   emotion: {fileID: 4256167806809103862}
+  collider: {fileID: 6149392301660078674}
 --- !u!65 &6149392301660078674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -499,7 +500,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 3.4546976, y: 8.494435, z: 1}
   m_Center: {x: 0.66255116, y: -0.7928896, z: -1}
