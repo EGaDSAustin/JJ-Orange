@@ -20,13 +20,14 @@ public class OvenManager : MonoBehaviour
 
     private Pizza curPizza = null;
 
-    // Start is called before the first frame update
+    // TODO: Make time cooked persistent across all scenes
+    //  Just found out that this wouldn't work after implementing
+
     void Start()
     {
         //RunOven(60);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -42,12 +43,17 @@ public class OvenManager : MonoBehaviour
     {
         open.enabled = true;
         closed.enabled = false;
+        curPizza = null;
     }
 
-    public void CloseOven()
+    public void CloseOven(Pizza nextPizza = null)
     {
         open.enabled = false;
         closed.enabled = true;
+        if (nextPizza != null) { 
+            curPizza = nextPizza;
+            RunOven(60);
+        }
     }
 
     public void RunOven(int time)
@@ -62,13 +68,15 @@ public class OvenManager : MonoBehaviour
     void Decrement()
     {
         curTime--;
-        if (curTime < 0)
+        curPizza.timeCooked++;
+        if (curPizza == null) curTime = 60;
+        if (curTime < 0 && curPizza != null)
         {
             overcooked = true;
             curTime++;
         }
         TimeSpan ts = TimeSpan.FromSeconds(curTime);
         timerText.text = ts.ToString(@"m\:ss");
-        Invoke("Decrement", 1f);
+        if (!overcooked && curPizza != null) Invoke("Decrement", 1f);
     }
 }

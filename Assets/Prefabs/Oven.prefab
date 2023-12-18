@@ -637,7 +637,6 @@ MonoBehaviour:
   open: {fileID: 2281589716677365740}
   closed: {fileID: 443019428544425173}
   timerText: {fileID: 3741336313204000541}
-  button: {fileID: 8739277542547864289}
 --- !u!65 &4260481308517378334
 BoxCollider:
   m_ObjectHideFlags: 0

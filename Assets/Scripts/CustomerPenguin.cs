@@ -54,13 +54,18 @@ public class CustomerPenguin : MonoBehaviour
             timeBackground.color = new Color(0f, 1f, 0f, 1f);
             listController.AddOrder(id, toppingsMask, cookTime);
             emotion.enabled = true;
-            emotion.sprite = Resources.Load<Sprite>("happypenguin");
+            ChangeEmotionHappy();
             Invoke("ChangeEmotionNeutral", 30f);
         }
         else
         {
             Debug.Log("ERROR: Double accepted customer order just happened somehow...");
         }
+    }
+
+    public void ChangeEmotionHappy()
+    {
+        emotion.sprite = Resources.Load<Sprite>("happypenguin");
     }
 
     void ChangeEmotionNeutral()
@@ -75,7 +80,7 @@ public class CustomerPenguin : MonoBehaviour
         Invoke("Leave", 30f);
     }
 
-    void Leave()
+    public void Leave()
     {
         listController.RemoveOrder(id);
         Destroy(this.gameObject);

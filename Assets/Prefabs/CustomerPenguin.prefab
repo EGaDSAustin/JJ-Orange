@@ -437,9 +437,10 @@ GameObject:
   m_Component:
   - component: {fileID: 884317371957312926}
   - component: {fileID: 371095602181585337}
+  - component: {fileID: 6149392301660078674}
   m_Layer: 0
   m_Name: CustomerPenguin
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -481,6 +482,27 @@ MonoBehaviour:
   shrimp: {fileID: 6447273084947972338}
   squid: {fileID: 1441064162704335860}
   emotion: {fileID: 4256167806809103862}
+--- !u!65 &6149392301660078674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219736951839321786}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.4546976, y: 8.494435, z: 1}
+  m_Center: {x: 0.66255116, y: -0.7928896, z: -1}
 --- !u!1 &5843242869735796955
 GameObject:
   m_ObjectHideFlags: 0

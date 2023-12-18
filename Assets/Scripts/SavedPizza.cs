@@ -8,19 +8,14 @@ public class SavedPizza : MonoBehaviour
 
     private PizzaListController pizzaListController;
     private OvenManager ovenManager;
+    private CustomerPenguin customer;
     private bool inList;
     private bool inOven;
+    private bool inCustomer;
 
-    // Start is called before the first frame update
     void Start()
     {
         pizzaListController = transform.parent.parent.Find("Pizzas").GetComponent<PizzaListController>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnMouseDrag()
@@ -38,7 +33,13 @@ public class SavedPizza : MonoBehaviour
         }
         else if (inOven)
         {
-            ovenManager.CloseOven();
+            ovenManager.CloseOven(pizza);
+        }
+        else if (inCustomer)
+        {
+            customer.ChangeEmotionHappy();
+            customer.Leave();
+            Destroy(this.gameObject);
         }
 
     }
@@ -60,6 +61,12 @@ public class SavedPizza : MonoBehaviour
             if (ovenManager != null) ovenManager.CloseOven(); // Close previous oven in case it hasn't been done already
             ovenManager = collision.gameObject.GetComponent<OvenManager>();
             ovenManager.OpenOven();
+        }
+        else if (collision.collider.CompareTag("Customer"))
+        {
+            inCustomer = true;
+            customer = collision.gameObject.GetComponent<CustomerPenguin>();
+            Debug.Log("Customer Spotted");
         }
     }
 
