@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OvenManager : MonoBehaviour
 {
@@ -29,6 +30,12 @@ public class OvenManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ToggleOpenState()
+    {
+        if (open.enabled) CloseOven();
+        else OpenOven();
     }
 
     public void OpenOven()

@@ -29,6 +29,12 @@ public class ListController : MonoBehaviour
     {
         orders.Add(new Order { id = id, toppingsMask = mask, cookTime = time });
         UpdateOrdersText();
+        //UpdateOrders();
+    }
+
+    void UpdateOrders()
+    {
+
     }
 
     public void RemoveOrder(int id)

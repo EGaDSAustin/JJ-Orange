@@ -43,6 +43,11 @@ public class SavedPizza : MonoBehaviour
 
     }
 
+    private void OnMouseDown()
+    {
+        if (inOven) { ovenManager.OpenOven(); }
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("SavedPizzas"))
@@ -52,7 +57,7 @@ public class SavedPizza : MonoBehaviour
         else if (collision.collider.CompareTag("Oven"))
         {
             inOven = true;
-            ovenManager.CloseOven(); // Close previous oven in case it hasn't been done already
+            if (ovenManager != null) ovenManager.CloseOven(); // Close previous oven in case it hasn't been done already
             ovenManager = collision.gameObject.GetComponent<OvenManager>();
             ovenManager.OpenOven();
         }

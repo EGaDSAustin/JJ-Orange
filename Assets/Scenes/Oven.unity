@@ -532,6 +532,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 4efcd69f5a41a254b917c0d17121bd39, type: 3}
     volume: 0.6
     pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1069156211
 Transform:
@@ -904,6 +905,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 443019428544425173, guid: c5c9552441e457d48b1d59ce7b422d27, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281589716677365740, guid: c5c9552441e457d48b1d59ce7b422d27, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6231117761813867647, guid: c5c9552441e457d48b1d59ce7b422d27, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9

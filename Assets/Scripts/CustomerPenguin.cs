@@ -16,10 +16,13 @@ public class CustomerPenguin : MonoBehaviour
     public SpriteRenderer squid;
     public SpriteRenderer emotion;
     private int cookTime = 0;
-    private int toppingsMask = 1; // TODO migrate to some kind of array; makes much more sense and will support specific #s of each type of topping
+    // TODO: migrate to some kind of array
+    // makes much more sense and will support specific #s of each type of topping
+    private int toppingsMask = 0; 
     static int orderID = 0;
     private int id;
     private ListController listController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +59,7 @@ public class CustomerPenguin : MonoBehaviour
         }
         else
         {
-            // TODO
+            Debug.Log("ERROR: Double accepted customer order just happened somehow...");
         }
     }
 
