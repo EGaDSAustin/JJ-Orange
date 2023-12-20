@@ -41,8 +41,12 @@ public class OvenManager : MonoBehaviour
 
     public void OpenOven()
     {
-        open.enabled = true;
-        closed.enabled = false;
+        if(open != null) {
+            open.enabled = true;
+        }
+        if(closed != null) {
+            closed.enabled = false;
+        }
         curPizza = null;
     }
 
@@ -68,7 +72,9 @@ public class OvenManager : MonoBehaviour
     void Decrement()
     {
         curTime--;
-        curPizza.timeCooked++;
+        if (curPizza != null) {
+            curPizza.timeCooked++;
+        }
         if (curPizza == null) curTime = 60;
         if (curTime < 0 && curPizza != null)
         {
